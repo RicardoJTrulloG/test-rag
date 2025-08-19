@@ -1,0 +1,33 @@
+http:
+  middlewares:
+    gzip:
+      compress: {}
+    sec-headers:
+      headers:
+        frameDeny: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        stsSeconds: 31536000
+        stsIncludeSubdomains: true
+        stsPreload: true
+        referrerPolicy: no-referrer-when-downgrade
+    ratelimit:
+      rateLimit:
+        average: 80
+        burst: 160
+
+  serversTransports:
+    insecureSkipVerify:
+      insecureSkipVerify: true
+
+tls:
+  options:
+    default:
+      minVersion: VersionTLS12
+
+labels:
+  - traefik.enable=true
+  - traefik.http.routers.api.rule=Host(`${API_HOST}`)
+  - traefik.http.routers.api.entrypoints=websecure
+  - traefik.http.routers.api.tls.certresolver=le
+  - traefik.http.services.api.loadbalancer.server.port=8000

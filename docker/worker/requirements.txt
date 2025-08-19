@@ -1,0 +1,14 @@
+# Reutiliza lo del API + Celery y modelos ligeros
+Django==5.0.6
+celery==5.4.0
+redis==5.0.4
+qdrant-client==1.9.1
+python-dotenv==1.0.1
+requests==2.32.3
+pydantic==2.7.4
+
+# Opcional: modelos (se instalarán más adelante si los usas en worker)
+onnxruntime==1.18.0
+sentence-transformers==2.7.0
+transformers==4.42.4
+# torch no es estrictamente necesario si usas ONNX; instálalo luego si hace falta

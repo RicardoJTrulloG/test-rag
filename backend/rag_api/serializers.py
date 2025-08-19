@@ -1,0 +1,1 @@
+# Placeholder (añade serializers aquí cuando modeles objetos)

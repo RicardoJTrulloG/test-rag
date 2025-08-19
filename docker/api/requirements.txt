@@ -1,0 +1,18 @@
+Django==5.0.6
+djangorestframework==3.15.2
+django-cors-headers==4.3.1
+djangorestframework-simplejwt==5.3.1
+gunicorn==22.0.0
+uvicorn[standard]==0.30.1
+psycopg2-binary==2.9.9
+qdrant-client==1.9.1
+redis==5.0.4
+pydantic==2.7.4
+python-dotenv==1.0.1
+requests==2.32.3
+numpy==1.26.4
+sentence-transformers==2.7.0
+onnxruntime==1.18.0
+httpx==0.27.0         # para streaming con OpenAI
+google-generativeai==0.7.2
+
